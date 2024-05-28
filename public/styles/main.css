@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "pier-sans";
+  src: url(../fonts/PPPierSans-Regular.otf);
+}
+@font-face {
+  font-family: "editorial-new";
+  src: url(../fonts/PPEditorialNew-Regular.otf);
+}
+
+h1,
+h2,
+h3 {
+  font-family: editorial-new;
+  opacity: 0.8;
+  color: #fdaf7b;
+}
+
+body {
+  background-color: #401f71;
+  color: #f2f2f2;
+  font-family: "pier-sans", Courier, monospace;
+}
+.topnav {
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background-color: #824d74;
+
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.topnav a {
+  display: flex;
+  flex-direction: row;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.topnav a:hover {
+  background-color: #577b8d;
+  color: black;
+}
+
+main {
+  min-height: 87vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.call-to-action-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3em;
+}
+
+.call-to-action-container .image-container {
+  margin-bottom: 0.5em;
+}
+.call-to-action-container h1 {
+  font-size: 82px;
+  letter-spacing: 0.12em;
+  max-width: 650px;
+  margin-bottom: 0;
+}
+.add-post-btn {
+  text-decoration: none;
+  color: #f2f2f2;
+  opacity: 0.8;
+  padding: 1em;
+  border-radius: 15px;
+  transition: all 0.3s;
+  background-color: #824d74;
+  z-index: 1;
+}
+
+.call-to-action-container a:hover,
+.submit-btn:hover {
+  opacity: 0.7;
+  color: #fdaf7b;
+  background-color: #fff;
+}
+
+.latest-posts-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.latest-posts-container h2 {
+  letter-spacing: 0.12em;
+}
+.latest-posts-container p {
+  padding: 0;
+  margin: 0;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.latest-posts {
+  width: 230px;
+  text-decoration: none;
+  color: #f2f2f2;
+  opacity: 0.8;
+}
+.edit,
+.delete {
+  opacity: 0.6;
+  cursor: pointer;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.posts-container {
+  padding: 5em;
+}
+main .title {
+  max-width: 70%;
+  margin-left: 0;
+  text-align: left;
+  opacity: 0.8;
+  letter-spacing: 0.12em;
+}
+main .date {
+  margin-left: 0;
+  text-align: left;
+  opacity: 0.8;
+}
+main .text {
+  font-family: pier-sans;
+  line-height: 1.5rem;
+  max-width: 550px;
+  text-align: left;
+  margin-left: 0;
+  opacity: 0.8;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  height: 100%;
+  padding: 4.5em;
+  text-align: center;
+  align-items: center;
+}
+.post h2 {
+  letter-spacing: 0.12em;
+  max-width: 70%;
+  margin-left: 15%;
+}
+.new-post-form {
+  margin: 10% 0 0 5%;
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+#title,
+#text {
+  font-size: 17px;
+  font-family: pier-sans;
+  color: #f2f2f2;
+  background-color: #401f71;
+  width: 100%;
+  line-height: 1.5rem;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #fdaf7b;
+  border-radius: 7px;
+}
+#text {
+  height: auto;
+  min-height: 40vh;
+}
+
+.submit-btn {
+  font-size: 17px;
+  cursor: pointer;
+  color: #f2f2f2;
+  opacity: 0.8;
+  padding: 1em;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s;
+  background-color: #824d74;
+  z-index: 1;
+  font-family: pier-sans;
+}
+.about {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3em;
+}
+
+.about h2 {
+  margin-top: 3em;
+  letter-spacing: 0.12em;
+  max-width: 70%;
+  margin-left: 15%;
+}
+.about p {
+  margin-left: 25%;
+  line-height: 1.5rem;
+  max-width: 50%;
+  text-align: left;
+  opacity: 0.8;
+}
+footer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 2rem;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles for tablets */
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .call-to-action-container {
+    padding: 0;
+    padding-top: 3em;
+  }
+  .call-to-action-container h1 {
+    font-size: 38px;
+    margin: 1em 0 1em 0;
+  }
+  .call-to-action-container,
+  .posts-container {
+    padding: 2.5em;
+  }
+  .post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    height: 100%;
+    padding: 2.5em;
+    text-align: center;
+    align-items: center;
+  }
+  .post h2 {
+    margin-top: 2em;
+  }
+  .post img {
+    height: 175px;
+  }
+  .new-post-form {
+    margin: 0;
+    min-width: 340px;
+  }
+  .about {
+  }
+  .about h2 {
+  }
+  .about p {
+    margin-left: 10%;
+    line-height: 1.5rem;
+    min-width: 80%;
+    text-align: left;
+    opacity: 0.8;
+  }
+}

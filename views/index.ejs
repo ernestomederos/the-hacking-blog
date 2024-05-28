@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+    <main>
+        <div class="call-to-action-container">
+            <h1>Are you ready to make some noise?</h1>
+            <div class="image-container">
+                <img src="assets/hii.png" height="175" alt="hi">
+            </div>
+            <a class="add-post-btn" href="new-post">Add a New Post</a>
+            <div class="latest-posts-container">
+                <h2>Latest Posts</h2>
+                <% for (let i=posts.length - 1; i>= 0; i--) { %>
+                    <div class="link-container">
+                        <a href="" class="latest-posts">
+                            <p class="text">
+                                <%= posts[i].title %>
+                            </p>
+                        </a>
+                        <form action="/edit" method="POST" class="edit-form">
+                            <input type="hidden" name="pTitle" value="<%= posts[i].title %>">
+                            <button type="submit" class="material-symbols-outlined edit">edit</button>
+                        </form>
+
+                        <form action="/delete" method="POST" class="delete-form">
+                            <input type="hidden" name="pTitle" value="<%= posts[i].title %>">
+                            <button type="submit" class="material-symbols-outlined delete">delete</button>
+                        </form>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+
+        <div class="posts-container">
+            <% for (let i=posts.length - 1; i>= 0; i--) { %>
+                <h2 class="title">
+                    <%= posts[i].title %>
+                </h2>
+                <p class="date">
+                    <%= posts[i].date %>
+                </p>
+                <div class="text">
+                    <p>
+                        <%= posts[i].text %>
+                    </p>
+                    <hr>
+                </div>
+                <% } %>
+        </div>
+    </main>
+    <%- include("partials/footer.ejs") %>

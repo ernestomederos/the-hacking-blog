@@ -1,0 +1,24 @@
+<%-include ("partials/header.ejs") %>
+
+    <div class="new-post post">
+        <div>
+            <h2>
+                Help us to build a better community!
+            </h2>
+            <img src="assets/Hello-world.png" alt="hacker-two" height="350">
+        </div>
+        <div>
+            <form class="new-post-form" action="/new-post" method="POST">
+                <input type="text" id="title" name="pTitle" placeholder="Insert Your Post Title"></input>
+                <textarea type="text" id="text" name="pText" placeholder="Insert Your Text Here"></textarea>
+                <button type="submit" class="submit-btn">Add a New Post</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <%-include ("partials/footer.ejs") %>
